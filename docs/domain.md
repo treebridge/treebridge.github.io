@@ -18,7 +18,9 @@ You need to point `gulp publish` to push to `master` instead:
 
 ## Connecting Domain with Github
 
-1. go to your repo on github, under Settings > GitHub Pages > Custom Domain and type the domain you want to point to
+1. make sure `gulp` is not running
+1. create a `CNAME` file on your `edit/` folder. Inside it, type the domain you want your github hosting to point to, on first line, save it
+1. run `gulp` again. your `CNAME` will be up on next `gulp publish`
 2. In your DNS manager, setup two `cname` records. One for the root apex (@) and one for www. Both point to `username.github.io`. If your DNS provider does **NOT** support `ALIAS` records on the root apex (@), simply create `A` records that point to `192.30.252.153` and `192.30.252.154`
 3 Wait til your name servers update: `dig yourdomain.com +nostats +nocomments +nocmd`
 
