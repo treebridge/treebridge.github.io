@@ -10,3 +10,5 @@ author:      nicholas
 1. Version control at [`docs/version-control.md`](https://github.com/lazy-8/base/blob/master/docs/version-control.md)
 1. Fast publishing at [`docs/publishing.md`](https://github.com/lazy-8/base/blob/master/docs/publishing.md)
 1. Domains at [`docs/domain.md`](https://github.com/lazy-8/base/blob/master/docs/domain.md)
+1. Your site autogenerates a [styleguide](/styleguide), learn [how
+to write SassDoc compliant comments](https://webdevstudios.com/2015/03/17/getting-started-with-sassdoc/)

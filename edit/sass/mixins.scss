@@ -1,7 +1,22 @@
-// (`ㅅ`)づ base mixins
-
-// Mixin to prefix several properties at once
-// https://css-tricks.com/snippets/sass/mixin-prefix-properties/
+/// Prefix several properties at once
+///
+/// @author Hugo Giraudel
+/// @group base
+/// @source https://css-tricks.com/snippets/sass/mixin-prefix-properties/
+///
+/// @example scss - Basic Usage Sass
+///    .example {
+///        @include prefix((transition: none), webkit moz ms o);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .example {
+///        -webkit-transition: none;
+///        -moz-transition: none;
+///        -ms-transition: none;
+///        -o-transition: none;
+///        transition: none;
+///    }
 
 @mixin prefix($declarations, $prefixes: ()) {
   @each $property, $value in $declarations {
@@ -17,12 +32,12 @@
   @if $prop == disable {
     @include prefix((
     transition: none
-  ), $prefixes);
+  ), webkit moz ms o);
   }
   @else {
     @include prefix((
       transition: $prop $time $ease
-    ), $prefixes);
+    ), webkit moz ms o);
   }
 }
 
@@ -30,30 +45,20 @@
   outline: dashed 1px $color;
 }
 
-@mixin size($mode: square, $width: 5px, $height: 5px) {
-  width: $width;
-  height: $height;
-  @if $mode == square {
-    width: $width;
-    height: $width;
-  }
-  @else {
-    width: $width;
-    height: $height;
-  }
-}
-
 @mixin border-box($mode: border-box) {
    @include prefix((
       box-sizing: $mode
-    ), $prefixes);
+    ), webkit moz ms o);
 }
 
-@mixin radius($mode: normal, $radius-1: 5px, $radius-2: 5px, $radius-3: 5px, $radius-4: 5px) {
-  @if $mode == normal {
+@mixin radius($radius-1: 5px, $radius-2: 5px, $radius-3: 5px, $radius-4: 5px, $mode: regular) {
+  @if $mode == regular {
     @include prefix((
     border-radius: $radius-1
-    ), $prefixes);
+    ), webkit moz ms o);
+        -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
   }
   @else {
     -webkit-border-top-right-radius: $radius-2;
@@ -69,23 +74,18 @@
     border-bottom-left-radius: $radius-4;
     border-top-left-radius: $radius-1;
   }
-  @if $mode == normal {
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-  }
 }
 
-@mixin shadow($mode: normal, $shadow: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+@mixin shadow($mode: box, $shadow: 0 1px 3px rgba(0, 0, 0, 0.25)) {
   @if $mode == text {
      @include prefix((
         text-shadow: $shadow
-      ), $prefixes);
+      ), webkit moz ms o);
   }
   @else {
      @include prefix((
         box-shadow: $shadow
-      ), $prefixes);
+      ), webkit moz ms o);
   }
 }
 
@@ -163,50 +163,89 @@
   }
 }
 
-// // (`ㅅ`)づ animation mixins
+/// Rotate object
+/// @group animation
+///
+/// @example scss - Basic Usage Sass
+///    .example {
+///        @include rotate(15);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .example {
+///        -webkit-transform: rotate(15deg);
+///        -moz-transform: rotate(15deg);
+///        -ms-transform: rotate(15deg);
+///        -o-transform: rotate(15deg);
+///        transform: rotate(15deg);
+///    }
 
 @mixin rotate($rotate: 0) {
    @include prefix((
       transform: rotate($rotate + deg)
-    ), $prefixes);
+    ), webkit moz ms o);
 }
+
+/// Scale object
+/// @group animation
+///
+/// @example scss - Basic Usage Sass
+///    .example {
+///        @include scale(1.2);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .example {
+///        -webkit-transform: scale(1.2);
+///        -moz-transform: scale(1.2);
+///        -ms-transform: scale(1.2);
+///        -o-transform: scale(1.2);
+///        transform: scale(1.2);
+///    }
 
 @mixin scale($scale: 1) {
    @include prefix((
       transform: scale($scale)
-    ), $prefixes);
+    ), webkit moz ms o);
 }
+
+/// Skew object
+/// @group animation
+///
+/// @example scss - Basic Usage Sass
+///    .example {
+///        @include skew(15);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .example {
+///        -webkit-transform: skew(15deg);
+///        -moz-transform: skew(15deg);
+///        -ms-transform: skew(15deg);
+///        -o-transform: skew(15deg);
+///        transform: skew(15deg);
+///    }
 
 @mixin skew($skew: 0) {
    @include prefix((
       transform: skew($skew + deg)
-    ), $prefixes);
+    ), webkit moz ms o);
 }
 
 @mixin translate($x: 0, $y: 0, $z: 0, $type: other) {
   @if $type == 3d {
      @include prefix((
         transform: translate3d($x + px, $y + px, $z + px)
-      ), $prefixes);
+      ), webkit moz ms o);
   }
   @else {
      @include prefix((
         transform: translate($x + px, $y + px)
-      ), $prefixes);
+      ), webkit moz ms o);
   }
 }
 
-// // (`ㅅ`)づ forms mixins
-
-@mixin scroll-hint($bgcolor: $theme0-bg) {
-  overflow: auto;
-  background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%, radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
-  background: linear-gradient($bgcolor 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), $bgcolor 90%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 0 100%;
-  background-repeat: no-repeat;
-  background-color: $bgcolor;
-  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-  background-attachment: local, local, scroll, scroll;
-}
+// (`ㅅ`)づ forms mixins
 
 @mixin disable($type: link) {
   @if $type == "select" {
@@ -250,134 +289,7 @@
   }
 }
 
-// // (`ㅅ`)づ devices mixins
-
-@mixin orientation($orientation: landscape) {
-  @media (orientation: $orientation) {
-    @content;
-  }
-}
-@mixin devicewidth($minus: 0px) {
-  @media screen and (max-width: 1024px) {
-    width: 1024px - $minus;
-  }
-  @media screen and (max-width: 768px) {
-    width: 768px - $minus;
-  }
-  @media screen and (max-width: 568px) {
-    width: 568px - $minus;
-  }
-  @media screen and (max-width: 480px) {
-    width: 480px - $minus;
-  }
-  @media screen and (max-width: 768px) {
-    width: 768px - $minus;
-  }
-}
-@mixin only($target: mac, $parent: html) {
-  #{$parent}.#{$target} & {
-    @content;
-  }
-}
-@mixin except($target: mac, $parent: html) {
-  #{$parent}:not(.#{$target}) & {
-    @content;
-  }
-}
-@mixin media($device: ipad, $scope: strict, $variation: mini) {
-  @if $device == "ipad" {
-    @if $scope == "portrait" {
-      @media only screen and (max-width: 768px) {
-        @content;
-      }
-    }
-    @else if $scope == "landscape" {
-      @media only screen and (max-width: 1024px) {
-        @content;
-      }
-    }
-    @else {
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        @content;
-      }
-    }
-  }
-  @else if $device == "iphone5" {
-    @if $scope == "portrait" {
-      @media only screen and (max-width: 320px) {
-        @content;
-      }
-    }
-    @else if $scope == "landscape" {
-      @media only screen and (max-width: 568px) {
-        @content;
-      }
-    }
-    @else {
-      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-        @content;
-      }
-    }
-  }
-  @else if $device == "iphone6" {
-    @if $scope == "portrait" {
-      @media only screen and (max-width: 375px) {
-        @content;
-      }
-    }
-    @else if $scope == "landscape" {
-      @media only screen and (max-width: 667px) {
-        @content;
-      }
-    }
-    @else {
-      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-        @content;
-      }
-    }
-  }
-  @else if $device == "iphone4" {
-    @if $scope == "portrait" {
-      @media only screen and (max-width: 320px) {
-        @content;
-      }
-    }
-    @else if $scope == "landscape" {
-      @media only screen and (max-width: 480px) {
-        @content;
-      }
-    }
-    @else {
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        @content;
-      }
-    }
-  }
-  @else if $device == "iphone6plus" {
-    @if $scope == "portrait" {
-      @media only screen and (max-width: 414px) {
-        @content;
-      }
-    }
-    @else if $scope == "landscape" {
-      @media only screen and (max-width: 736px) {
-        @content;
-      }
-    }
-    @else {
-      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
-        @content;
-      }
-    }
-  }
-  @else {
-    @media screen and ($scope + -width: $device) {
-      @content;
-    }
-  }
-}
-
-// // (`ㅅ`)づ typography mixins
+// (`ㅅ`)づ typography mixins
 
 @mixin word-wrap {
   word-break: break-word;
@@ -461,7 +373,7 @@
   @return 90deg - convert-angle($value, 'deg');
 }
 
-@mixin gradient($direction, $color-stops...) {
+@mixin linear-gradient($direction, $color-stops...) {
   @if is-direction($direction) == false {
     $color-stops: ($direction, $color-stops);
     $direction: 180deg;
