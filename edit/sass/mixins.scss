@@ -1,22 +1,9 @@
-/// Prefix several properties at once
-///
-/// @author Hugo Giraudel
-/// @group base
-/// @source https://css-tricks.com/snippets/sass/mixin-prefix-properties/
-///
-/// @example scss - Basic Usage Sass
-///    .example {
-///        @include prefix((transition: none), webkit moz ms o);
-///    }
-///
-/// @example scss - Basic Usage CSS Output
-///    .example {
-///        -webkit-transition: none;
-///        -moz-transition: none;
-///        -ms-transition: none;
-///        -o-transition: none;
-///        transition: none;
-///    }
+// (`ㅅ`)づ base mixins
+
+$prefixes: webkit moz ms o;
+
+// Mixin to prefix several properties at once
+// https://css-tricks.com/snippets/sass/mixin-prefix-properties/
 
 @mixin prefix($declarations, $prefixes: ()) {
   @each $property, $value in $declarations {
@@ -32,12 +19,12 @@
   @if $prop == disable {
     @include prefix((
     transition: none
-  ), webkit moz ms o);
+  ), $prefixes);
   }
   @else {
     @include prefix((
       transition: $prop $time $ease
-    ), webkit moz ms o);
+    ), $prefixes);
   }
 }
 
@@ -48,14 +35,14 @@
 @mixin border-box($mode: border-box) {
    @include prefix((
       box-sizing: $mode
-    ), webkit moz ms o);
+    ), $prefixes);
 }
 
 @mixin radius($radius-1: 5px, $radius-2: 5px, $radius-3: 5px, $radius-4: 5px, $mode: regular) {
   @if $mode == regular {
     @include prefix((
     border-radius: $radius-1
-    ), webkit moz ms o);
+    ), $prefixes);
         -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
@@ -80,12 +67,12 @@
   @if $mode == text {
      @include prefix((
         text-shadow: $shadow
-      ), webkit moz ms o);
+      ), $prefixes);
   }
   @else {
      @include prefix((
         box-shadow: $shadow
-      ), webkit moz ms o);
+      ), $prefixes);
   }
 }
 
@@ -163,85 +150,36 @@
   }
 }
 
-/// Rotate object
-/// @group animation
-///
-/// @example scss - Basic Usage Sass
-///    .example {
-///        @include rotate(15);
-///    }
-///
-/// @example scss - Basic Usage CSS Output
-///    .example {
-///        -webkit-transform: rotate(15deg);
-///        -moz-transform: rotate(15deg);
-///        -ms-transform: rotate(15deg);
-///        -o-transform: rotate(15deg);
-///        transform: rotate(15deg);
-///    }
+// (`ㅅ`)づ animation mixins
 
 @mixin rotate($rotate: 0) {
    @include prefix((
       transform: rotate($rotate + deg)
-    ), webkit moz ms o);
+    ), $prefixes);
 }
-
-/// Scale object
-/// @group animation
-///
-/// @example scss - Basic Usage Sass
-///    .example {
-///        @include scale(1.2);
-///    }
-///
-/// @example scss - Basic Usage CSS Output
-///    .example {
-///        -webkit-transform: scale(1.2);
-///        -moz-transform: scale(1.2);
-///        -ms-transform: scale(1.2);
-///        -o-transform: scale(1.2);
-///        transform: scale(1.2);
-///    }
 
 @mixin scale($scale: 1) {
    @include prefix((
       transform: scale($scale)
-    ), webkit moz ms o);
+    ), $prefixes);
 }
-
-/// Skew object
-/// @group animation
-///
-/// @example scss - Basic Usage Sass
-///    .example {
-///        @include skew(15);
-///    }
-///
-/// @example scss - Basic Usage CSS Output
-///    .example {
-///        -webkit-transform: skew(15deg);
-///        -moz-transform: skew(15deg);
-///        -ms-transform: skew(15deg);
-///        -o-transform: skew(15deg);
-///        transform: skew(15deg);
-///    }
 
 @mixin skew($skew: 0) {
    @include prefix((
       transform: skew($skew + deg)
-    ), webkit moz ms o);
+    ), $prefixes);
 }
 
 @mixin translate($x: 0, $y: 0, $z: 0, $type: other) {
   @if $type == 3d {
      @include prefix((
         transform: translate3d($x + px, $y + px, $z + px)
-      ), webkit moz ms o);
+      ), $prefixes);
   }
   @else {
      @include prefix((
         transform: translate($x + px, $y + px)
-      ), webkit moz ms o);
+      ), $prefixes);
   }
 }
 
