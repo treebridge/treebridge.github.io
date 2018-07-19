@@ -1,6 +1,17 @@
 @include font-face(fontawesome-webfont);
 
+.container {
 
+  img {
+  width: 100%;
+}
+}
+.site {
+    background-color: #ddc694;
+  }
+body {
+  background-color: #eee;
+}
 
 header.header {
     border-bottom: solid 1px $color-accent;
