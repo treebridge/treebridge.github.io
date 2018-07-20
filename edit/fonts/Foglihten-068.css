@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Foglihten";
+    src: url("Foglihten-068.eot");
+    src: url("Foglihten-068.eot?#iefix") format("embedded-opentype"),
+         url("Foglihten-068.woff2") format("woff2"),
+         url("Foglihten-068.woff") format("woff"),
+         url("Foglihten-068.ttf") format("ttf"),
+         url("Foglihten-068.svg#Foglihten") format("svg");
+    font-style: normal;
+    font-weight: regular;
+}

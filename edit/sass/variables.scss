@@ -4,5 +4,68 @@
 
 $prefixes: webkit moz ms o;
 
-$gap: 15px;
-$color-accent: #ccc;
+$gap: 6px;
+$fs: 4px;
+$container: 800px;
+$radius: 3px;
+$container: 600px;
+
+$font-title: AC_BigSerif_One;
+$font-text: Foglihten-068;
+
+$c-bg: #ddc694;
+$c-primary: #333363;
+$c-secondary: #fae8d4;
+$c-white: white;
+
+$animation-duration: 1s !default;
+$animation-function: ease !default;
+$animation-delay: 0.2s !default;
+$animation-count: 1 !default;
+$animation-fill: both !default;
+$animation-visibility: hidden !default;
+
+// (\_/)
+// (`ㅅ`)づ calculations
+// (")(")
+
+$gap2: ($gap * 2);
+$gap3: ($gap * 3);
+$gap4: ($gap * 4);
+$gap5: ($gap * 5);
+$gap6: ($gap * 6);
+$gap7: ($gap * 7);
+$gap8: ($gap * 8);
+$gap9: ($gap * 9);
+$gap10: ($gap * 10);
+$gap11: ($gap * 11);
+$gap12: ($gap * 12);
+$gap13: ($gap * 13);
+$gap14: ($gap * 14);
+$gap15: ($gap * 15);
+$gap16: ($gap * 16);
+$gap17: ($gap * 17);
+$gap18: ($gap * 18);
+$gap19: ($gap * 19);
+$gap20: ($gap * 20);
+
+$fs2: ($fs * 2);
+$fs3: ($fs * 3);
+$fs4: ($fs * 4);
+$fs5: ($fs * 5);
+$fs6: ($fs * 6);
+$fs7: ($fs * 7);
+$fs8: ($fs * 8);
+$fs9: ($fs * 9);
+$fs10: ($fs * 10);
+$fs11: ($fs * 11);
+$fs12: ($fs * 12);
+$fs13: ($fs * 13);
+$fs14: ($fs * 14);
+$fs15: ($fs * 15);
+$fs16: ($fs * 16);
+$fs17: ($fs * 17);
+$fs18: ($fs * 18);
+$fs19: ($fs * 19);
+$fs20: ($fs * 20);
+
