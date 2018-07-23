@@ -28,14 +28,31 @@ background-position: left top, right bottom;
   & > * {
     padding: $gap4 0;
   }
-    .avatar {
+  .avatar {
     margin-left: -$gap4;
+    background-image: url(../images/avatar.png);
+    background-size: cover;
+    height: 250px;
+    opacity: .8;
+    background-position: left $gap2;
+    background-repeat: no-repeat;
   }
 }
-.newsletter, .profile, footer.footer {
+.newsletter, .profile {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+
+footer.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: $gap2 0;
+  a {
+    display: block;
+}
+}
+
+
 
 header.header, footer.footer {
   @extend .container;
@@ -43,6 +60,9 @@ header.header, footer.footer {
   color: $c-white;
   a {
     color: $c-white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 header.header {
