@@ -83,8 +83,20 @@ header.header {
 }
 body {
   font-family: $font-text;
+  font-size: $fs4;
   background-color: $c-bg;
   color: $c-primary;
+}
+
+p.quote {
+  margin: $gap3 0;
+  border-top: solid 1px $c-primary;
+  background-image: url(../images/quote.svg);
+  background-repeat: no-repeat;
+  background-position: 0 $gap4;
+  padding-top: $gap3;
+  padding-left: $gap7;
+  background-size: $gap5 $gap5;
 }
 
 h1, h2, h3, h4, h4, h5, h6 {
