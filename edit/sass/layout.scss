@@ -61,6 +61,7 @@ background-position: left top, right bottom;
 }
 .newsletter, .profile {
   border-top: solid 1px $c-primary;
+  grid-gap: $gap4;
   margin-top: $gap4;
     display: grid;
   grid-template-columns: 1fr 2fr;
@@ -68,12 +69,11 @@ background-position: left top, right bottom;
     padding: $gap4 0;
   }
   .avatar {
-    margin-left: -$gap4;
     background-image: url(../images/avatar.png);
     background-size: cover;
-    height: 250px;
+    min-height: 230px;
     opacity: .8;
-    background-position: left $gap2;
+    background-position: center $gap3;
     background-repeat: no-repeat;
   }
 }
