@@ -11,15 +11,15 @@
 - I'm interested in:
    - Individual coaching
    - Team coaching
-- I'm looking for help with: (Select all that apply) [make 1st person]
-   - Desire to aim higher and play   own/ your team's "bigger game"
-   - Desire to invest in your own/ your team's personal growth and development
-   - Desire to increase your own/ your team's personal or professional effectiveness
-   - Discernment of major choices for yourself/ your team
-   - Support or preparation for a major undertaking for yourself/ your team
-   - Adjusting to major changes for yourself/ your team
+- I'm looking for help with: (Select all that apply)
+   - Desire to aim higher and play my/my team's "bigger game"
+   - Desire to invest in your my/my team's personal growth and development
+   - Desire to increase your my/my team's personal or professional effectiveness
+   - Discernment of major choices for myself/my team
+   - Support or preparation for a major undertaking for myself/my team
+   - Adjusting to major changes for myself/my team
    - Recovering from a major setback
-   - Increased complexity or responsibility in your own/ your team's life or work
+   - Increased complexity or responsibility in your my/my team's life or work
    - Challenges in personal or professional relationships
    - Adapting to a new culture
    - Sense of dryness or dissatisfaction with current life or work situation

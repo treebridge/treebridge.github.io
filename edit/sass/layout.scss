@@ -10,6 +10,20 @@ body {
   color: $c-primary;
 }
 
+.modal {
+.modal-dialog {
+    width: $container;
+  @include radius(0, 5px);
+  padding: 0;
+
+  @include shadow(box, 0 $radius 0 rgba(0, 0, 0, 0.1));
+}
+   iframe {
+width: 100%;
+border: none;
+height: 80vh;
+}
+}
 
 h1, h2, h3, h4, h4, h5, h6 {
   font-family: $font-title;
