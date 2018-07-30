@@ -228,16 +228,17 @@ p {
 }
 
 .panel-group {
-  margin: 0;
+  margin-bottom: $gap3;
   .panel {
     @include radius(0);
     background: none;
     padding: 0;
     @include shadow(box, none);
+    &:not(:last-of-type) {
     border-bottom: solid 1px $c-primary;
+    }
     i.fa {
-float: left;
-padding-right: $gap;
+float: right;
 font-size: $fs4;
     }
     p:last-of-type {
@@ -245,16 +246,22 @@ font-size: $fs4;
     }
     &:first-of-type .collapse-trigger {
       @extend h2;
-      i.fa {
-        margin-top: 3px;
-      }
     }
        &:not(:first-of-type) .collapse-trigger {
       @extend h3;
       padding: $gap 0;
+       i.fa {
+        margin-top: -3px;
+      }
     }
     .collapse-trigger {
 display: block;
     }
   }
+}
+
+.addon {
+  font-size: $fs3;
+  padding-top: $gap3;
+  padding-bottom: 0;
 }
