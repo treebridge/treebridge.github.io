@@ -84,9 +84,8 @@ background-position: left top, right bottom;
   }
   .avatar {
     background-image: url(../images/avatar.png);
-    background-size: cover;
-    min-height: 230px;
-    opacity: .8;
+    background-size: contain;
+    opacity: .7;
     background-position: center $gap3;
     background-repeat: no-repeat;
   }
@@ -219,5 +218,43 @@ table {
   grid-row-gap: 0;
   .gap {
     background-color: $c-primary;
+  }
+  .action {a.btn {
+   margin-top: $gap2;
+  }
+p {
+  font-size: $fs3;
+  }}
+}
+
+.panel-group {
+  margin: 0;
+  .panel {
+    @include radius(0);
+    background: none;
+    padding: 0;
+    @include shadow(box, none);
+    border-bottom: solid 1px $c-primary;
+    i.fa {
+float: left;
+padding-right: $gap;
+font-size: $fs4;
+    }
+    p:last-of-type {
+     padding-bottom: $gap2;
+    }
+    &:first-of-type .collapse-trigger {
+      @extend h2;
+      i.fa {
+        margin-top: 3px;
+      }
+    }
+       &:not(:first-of-type) .collapse-trigger {
+      @extend h3;
+      padding: $gap 0;
+    }
+    .collapse-trigger {
+display: block;
+    }
   }
 }
