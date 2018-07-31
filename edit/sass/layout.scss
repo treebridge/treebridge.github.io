@@ -12,24 +12,27 @@ body {
 
 .modal {
   .modal-dialog, .modal-content {
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin-bottom: 0 !important;
+
   }
   .modal-content {
+    @include shadow(box, none !important);
+    background: none;
+    border: none;
   }
-.modal-dialog {
-  width: 100%;
+  .modal-dialog {
+    width: 100%;
     max-width: 640px;
-  padding: 0;
-    box-shadow: 0 $radius 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 0 !important;
 
-}
-   iframe {
-width: 100%;
-border: none;
-height: 80vh;
-}
+  }
+  iframe {
+    width: 100%;
+    border: none;
+    height: 80vh;
+    @include shadow(box, 0 $radius 0 rgba(0, 0, 0, 0.1));
+  }
 }
 
 h1, h2, h3, h4, h4, h5, h6 {
@@ -76,15 +79,15 @@ a {
   @include hide-text;
   @extend .container;
   height:  600px;
-background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
-background-repeat: repeat-x, no-repeat;
-background-position: left top, right bottom;
+  background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
+  background-repeat: repeat-x, no-repeat;
+  background-position: left top, right bottom;
 }
 .newsletter, .profile {
   border-top: solid 1px $c-primary;
   grid-gap: $gap4;
   margin-top: $gap4;
-    display: grid;
+  display: grid;
   grid-template-columns: 1fr 2fr;
   & > * {
     padding: $gap4 0;
@@ -99,24 +102,24 @@ background-position: left top, right bottom;
 }
 
 .newsletter {
-    align-items: center;
-      h1, h2, h3, form {
+  align-items: center;
+  h1, h2, h3, form {
     padding: 0;
     padding-top: $gap4;
     @include border-box;
   }
-    form {
-          display: grid;
-  grid-template-columns: 3fr 1fr;
+  form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 
-  .btn {
-    @include radius(0, $radius, $radius, 0, irregular);
+    .btn {
+      @include radius(0, $radius, $radius, 0, irregular);
     }
     .input {
-@include radius($radius, 0, 0, $radius, irregular);
-padding: 0 $gap2;
-border: solid 1px #ccc;
-border-right: none;
+      @include radius($radius, 0, 0, $radius, irregular);
+      padding: 0 $gap2;
+      border: solid 1px #ccc;
+      border-right: none;
 
     }
   }
@@ -129,7 +132,7 @@ footer.footer {
   padding: $gap2 0;
   a {
     display: block;
-}
+  }
 }
 
 
@@ -234,7 +237,7 @@ table {
   @include shadow(box, 0 $radius 0 rgba(0, 0, 0, 0.1));
   &:hover, &:active {
     color: white;
-  background-color: lighten($c-primary, 20%);
+    background-color: lighten($c-primary, 20%);
   }
 }
 .plans {
@@ -248,8 +251,8 @@ table {
   }
   .action {a.btn {
    margin-top: $gap2;
-  }
-p {
+ }
+ p {
   font-size: $fs3;
   }}
 }
@@ -262,38 +265,38 @@ p {
     padding: 0;
     @include shadow(box, none);
     &:not(:last-of-type) {
-    border-bottom: solid 1px $c-primary;
+      border-bottom: solid 1px $c-primary;
     }
     i.fa {
-font-size: $fs4;
-margin: 0;
-paddinG: 0;
-margin-top: -3px;
-text-align: right;
+      font-size: $fs4;
+      margin: 0;
+      paddinG: 0;
+      margin-top: -3px;
+      text-align: right;
     }
     p:last-of-type {
      padding-bottom: $gap2;
-    }
-    .collapse-trigger {
-        display: grid;
-        color: $c-primary !important;
-  grid-template-columns: 1fr $gap3;
-  align-items: center;
-  &[aria-expanded="true"] {
-    text-decoration: none !important;
-    i.fa {
-     transform: rotate(180deg) translate(-5px, 0px);
+   }
+   .collapse-trigger {
+    display: grid;
+    color: $c-primary !important;
+    grid-template-columns: 1fr $gap3;
+    align-items: center;
+    &[aria-expanded="true"] {
+      text-decoration: none !important;
+      i.fa {
+       transform: rotate(180deg) translate(-5px, 0px);
 
-    }
+     }
+   }
+   h3 {
+    padding: $gap 0;
   }
-h3 {
-  padding: $gap 0;
+  h2 {
+    padding-bottom: $gap;
+  }
 }
-h2 {
-  padding-bottom: $gap;
 }
-  }
-  }
 }
 
 .addon {
