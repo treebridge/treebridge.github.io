@@ -94,10 +94,11 @@ a {
   }
   .avatar {
     background-image: url(../images/avatar.png);
-    background-size: contain;
+    background-size: auto 330px;
     opacity: .7;
     background-position: center $gap3;
     background-repeat: no-repeat;
+    height: 330px;
   }
 }
 
