@@ -11,12 +11,19 @@ body {
 }
 
 .modal {
+  .modal-dialog, .modal-content {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .modal-content {
+  }
 .modal-dialog {
-    width: $container;
-  @include radius(0, 5px);
+  width: 100%;
+    max-width: 640px;
   padding: 0;
+    box-shadow: 0 $radius 0 rgba(0, 0, 0, 0.1) !important;
 
-  @include shadow(box, 0 $radius 0 rgba(0, 0, 0, 0.1));
 }
    iframe {
 width: 100%;
@@ -262,6 +269,7 @@ font-size: $fs4;
 margin: 0;
 paddinG: 0;
 margin-top: -3px;
+text-align: right;
     }
     p:last-of-type {
      padding-bottom: $gap2;
@@ -269,17 +277,20 @@ margin-top: -3px;
     .collapse-trigger {
         display: grid;
         color: $c-primary !important;
-  grid-template-columns: $gap3 1fr;
+  grid-template-columns: 1fr $gap3;
   align-items: center;
   &[aria-expanded="true"] {
     text-decoration: none !important;
     i.fa {
-     transform: rotate(180deg) translate(6px, 0px);
+     transform: rotate(180deg) translate(-5px, 0px);
 
     }
   }
 h3 {
   padding: $gap 0;
+}
+h2 {
+  padding-bottom: $gap;
 }
   }
   }

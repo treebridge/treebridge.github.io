@@ -16,6 +16,7 @@
    - speaking and writing
    - less copy
    - bio in sections (for accordions)
+   - footer. contact?
 - HTML layout, responsive (for phones and smaller screens)
 - biz cards
 
