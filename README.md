@@ -9,7 +9,7 @@
 - redesign form, remove google references
 - ~~google analytics~~
 - ~~newsletter, signup~~
-- newsletter form design
+- ~~newsletter form design~~
 - newsletter, move email
 - ~~actual copy (this is on you, check treebridge website for placeholders)~~
 - more copy
