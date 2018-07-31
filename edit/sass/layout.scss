@@ -93,6 +93,26 @@ background-position: left top, right bottom;
 
 .newsletter {
     align-items: center;
+      h1, h2, h3, form {
+    padding: 0;
+    padding-top: $gap4;
+    @include border-box;
+  }
+    form {
+          display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  .btn {
+    @include radius(0, $radius, $radius, 0, irregular);
+    }
+    .input {
+@include radius($radius, 0, 0, $radius, irregular);
+padding: 0 $gap2;
+border: solid 1px #ccc;
+border-right: none;
+
+    }
+  }
 }
 
 
@@ -199,6 +219,7 @@ table {
   display: block;
   text-align: center;
   background-color: $c-primary;
+  border: solid 1px $c-primary;
   @include transition;
   font-family: $font-text;
   color: $c-white;
@@ -206,7 +227,6 @@ table {
   @include shadow(box, 0 $radius 0 rgba(0, 0, 0, 0.1));
   &:hover, &:active {
     color: white;
-
   background-color: lighten($c-primary, 20%);
   }
 }
