@@ -11,7 +11,7 @@ body {
 }
 
 .cover, .container {
-  @include fadeIn($duration: 1s);
+  @include fadeIn($duration: 500ms);
   @include transition;
 }
 
@@ -19,11 +19,11 @@ body {
   width: 300px;
   height: 300px;
   background-size: contain;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  margin-top: 200px;
-  margin-left: -$gap8;
-  @include fadeInLeft($delay: 1s);
+background-image: url(../images/logo.svg);
+background-repeat: no-repeat;
+margin-top: 180px;
+margin-left: -$gap10;
+@include fadeInLeft($delay: 500ms);
 }
 
 ul, ol {

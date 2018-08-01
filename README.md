@@ -12,12 +12,10 @@
 - ~~newsletter form design~~
 - newsletter, move email
 - ~~actual copy (this is on you, check treebridge website for placeholders)~~
-- more copy
-   - speaking and writing
-   - less copy
-   - bio in sections (for accordions)
+- ~~more copy~~
+   - ~~speaking and writing~~
+   - ~~less copy~~
+   - ~~bio in sections (for accordions)~~
    - footer. contact?
 - HTML layout, responsive (for phones and smaller screens)
 - biz cards
-
-4zT9aVai]#b7*w
