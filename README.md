@@ -16,13 +16,13 @@
    - ~~speaking and writing~~
    - ~~less copy~~
    - ~~bio in sections (for accordions)~~
-   - footer. contact?
+   - ~~footer. contact?~~
    - ~~my client, talks, as second choice~~
    - ~~larger screen, smaller cover~~
    - new data (3rd iteraction)
 - HTML layout, responsive (for phones and smaller screens)
 - biz cards
-- fix logo font discrepancies
+- ~~fix logo font discrepancies~~
 
 --------
 

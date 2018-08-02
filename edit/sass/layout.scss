@@ -15,15 +15,77 @@ body {
   @include transition;
 }
 
+$curl-padding: $gap4;
+$curl-border: $gap2;
+$curl-total: ($curl-padding + $curl-border);
+$curl-delay: 500ms;
+
+@mixin curl($w: 300px, $h: 150px) {
+  width: $w;
+  height: $h;
+  .line.ver {
+    width: $w - ($curl-total * 2);
+    height: $h;
+  }
+  .line.hor {
+    width: $w;
+    height: $h - ($curl-total * 2);
+  }
+}
+%curl {
+  background-color: $c-secondary;
+  border: solid $curl-border $c-primary;
+  padding: $curl-padding;
+  color: $c-primary;
+  .line {
+    display: block;
+    border: solid 1px $c-secondary;
+    position: absolute;
+
+    &.ver {
+      border-top: none;
+      border-bottom: none;
+      margin-top: -$curl-total;
+
+    }
+    &.hor {
+      margin-left: -$curl-total;
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+.quote, .logo {
+   @extend %curl;
+   margin-left: -$gap6;
+}
 .logo {
-  width: 300px;
-  height: 300px;
-  background-size: contain;
-background-image: url(../images/logo.svg);
-background-repeat: no-repeat;
-margin-top: 80px;
-margin-left: -$gap10;
-@include fadeInLeft($delay: 500ms);
+ @include curl(270px, 145px);
+
+ @include fadeIn($delay: $curl-delay);
+ h1 {
+  font-size: $fs7;
+  margin-bottom: $gap2;
+  padding-bottom: $gap;
+  border-bottom: solid 1px $c-primary;
+ }
+ h2 {
+  font-size: $fs5;
+ }
+
+}
+
+.quote {
+ @include curl(370px, 170px);
+ margin-top: -$curl-border;
+ @include fadeIn($delay: ($curl-delay * 2));
+ p {
+  &:not(.sig) {
+    font-size: $fs7;
+    padding-top: 0;
+    line-height: 120%;
+  }
+}
 }
 
 ul, ol {
@@ -96,9 +158,10 @@ a {
 }
 .cover {
   background-color: $c-cover;
-  @include hide-text;
   @extend .container;
   height:  500px;
+  padding: 0;
+  padding-top: $gap10;
   background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
   background-repeat: repeat-x, no-repeat;
   background-position: left top, right bottom;
