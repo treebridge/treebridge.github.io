@@ -2,9 +2,6 @@
 
 ## TODO
 
-- TODO
-- ~~DONE~~
-
 - branding, 2nd iteration
 - treebridge email, test
   - newsletter, move email
@@ -26,3 +23,8 @@
 - biz cards
 - new data (3rd iteraction)
 - fix logo font discrepancies
+
+--------
+
+- TODO
+- ~~DONE~~
