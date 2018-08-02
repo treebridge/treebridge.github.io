@@ -17,6 +17,9 @@
    - ~~less copy~~
    - ~~bio in sections (for accordions)~~
    - footer. contact?
+   - ~~my client, talks, as second choice~~
+   - ~~larger screen, smaller cover~~
 - HTML layout, responsive (for phones and smaller screens)
 - biz cards
 - new data (3rd iteraction)
+- fix logo font discrepancies

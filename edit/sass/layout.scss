@@ -21,7 +21,7 @@ body {
   background-size: contain;
 background-image: url(../images/logo.svg);
 background-repeat: no-repeat;
-margin-top: 180px;
+margin-top: 80px;
 margin-left: -$gap10;
 @include fadeInLeft($delay: 500ms);
 }
@@ -98,10 +98,11 @@ a {
   background-color: $c-cover;
   @include hide-text;
   @extend .container;
-  height:  600px;
+  height:  500px;
   background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
   background-repeat: repeat-x, no-repeat;
   background-position: left top, right bottom;
+  background-size: 60% 60%, 50% 50%;
 }
 .newsletter, .profile {
   border-top: solid 1px $c-primary;
