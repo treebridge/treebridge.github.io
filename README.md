@@ -2,6 +2,9 @@
 
 ## TODO
 
+- TODO
+- ~~DONE~~
+
 - branding, 2nd iteration
 - treebridge email, test
   - newsletter, move email
