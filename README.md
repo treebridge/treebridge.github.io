@@ -1,16 +1,16 @@
-### `lazy-8/base`
+### `treebridge`
 
 ## TODO
 
-- ~~branding, 2nd iteration~~
+- branding, 2nd iteration
 - treebridge email, test
-- redirect email
+  - newsletter, move email
+  - redirect email
 - ~~google form~~
 - redesign form, remove google references
 - ~~google analytics~~
 - ~~newsletter, signup~~
 - ~~newsletter form design~~
-- newsletter, move email
 - ~~actual copy (this is on you, check treebridge website for placeholders)~~
 - ~~more copy~~
    - ~~speaking and writing~~
@@ -19,3 +19,4 @@
    - footer. contact?
 - HTML layout, responsive (for phones and smaller screens)
 - biz cards
+- new data (3rd iteraction)
