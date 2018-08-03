@@ -19,8 +19,8 @@
    - ~~footer. contact?~~
    - ~~my client, talks, as second choice~~
    - ~~larger screen, smaller cover~~
-   - new data (3rd iteraction)
-- HTML layout, responsive (for phones and smaller screens)
+   - ~~new data (3rd iteraction)~~
+- HTML layout, responsive (for phones, tablets and wide screens)
 - biz cards
 - ~~fix logo font discrepancies~~
 

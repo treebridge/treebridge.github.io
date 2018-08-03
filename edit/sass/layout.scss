@@ -56,8 +56,8 @@ $curl-delay: 500ms;
   }
 }
 .quote, .logo {
-   @extend %curl;
-   margin-left: -$gap6;
+ @extend %curl;
+ margin-left: -$gap6;
 }
 .logo {
  @include curl(270px, 145px);
@@ -68,15 +68,15 @@ $curl-delay: 500ms;
   margin-bottom: $gap2;
   padding-bottom: $gap;
   border-bottom: solid 1px $c-primary;
- }
- h2 {
+}
+h2 {
   font-size: $fs5;
- }
+}
 
 }
 
 .quote {
- @include curl(370px, 170px);
+ @include curl(350px, 170px);
  margin-top: -$curl-border;
  @include fadeIn($delay: ($curl-delay * 2));
  p {
@@ -167,12 +167,18 @@ a {
   background-position: left top, right bottom;
   background-size: 60% 60%, 50% 50%;
 }
-.newsletter, .profile {
-  border-top: solid 1px $c-primary;
-  grid-gap: $gap4;
-  margin-top: $gap4;
+.newsletter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.profile {
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+.newsletter, .profile {
+  border-top: solid 1px $c-primary;
+  margin-top: $gap4;
+  grid-gap: $gap4;
   & > * {
     padding: $gap4 0;
   }
