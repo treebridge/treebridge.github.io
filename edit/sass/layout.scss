@@ -60,36 +60,54 @@ $curl-delay: 500ms;
 .quote, .logo {
  @extend %curl;
  margin-left: -$gap6;
-     @media screen and (max-width: $main) {
- margin-left: $gap4;
-  }
+ @media screen and (max-width: $bp) {
+   margin-left: $gap4;
+ }
 }
 .logo {
- @include curl(270px, 145px);
- @include fadeIn($delay: $curl-delay);
- h1 {
-  font-size: $fs7;
-  margin-bottom: $gap2;
-  padding-bottom: $gap;
-  border-bottom: solid 1px $c-primary;
-}
-h2 {
-  font-size: $fs5;
-}
-
+  @include curl(270px, 145px);
+  @include fadeIn($delay: $curl-delay);
+  h1 {
+    font-size: $fs7;
+    margin-bottom: $gap2;
+    padding-bottom: $gap;
+    border-bottom: solid 1px $c-primary;
+  }
+  h2 {
+    font-size: $fs5;
+  }
+  @media screen and (max-width: $bp) {
+      @include curl(218px, 130px);
+  h1 {
+    font-size: $fs5;
+  }
+  h2 {
+    font-size: $fs4;
+  }
+  }
 }
 
 .quote {
- @include curl(350px, 170px);
- margin-top: -$curl-border;
- @include fadeIn($delay: ($curl-delay * 2));
- p {
-  &:not(.sig) {
-    font-size: $fs7;
-    padding-top: 0;
-    line-height: 120%;
+  @include curl(350px, 170px);
+  margin-top: -$curl-border;
+  @include fadeIn($delay: ($curl-delay * 2));
+  p {
+    &:not(.sig) {
+      font-size: $fs7;
+      padding-top: 0;
+      line-height: 120%;
+    }
   }
-}
+  @media screen and (max-width: $bp) {
+    @include curl(250px, 150px);
+    p {
+      &:not(.sig) {
+        font-size: $fs5;
+        padding-top: 0;
+        line-height: 120%;
+      }
+    }
+  }
 }
 
 ul, ol {
@@ -153,11 +171,11 @@ a {
 }
 
 .main {
-  max-width: $main;
+  max-width: $bp;
   background-color: $c-secondary;
   padding: 0 $gap4;
   margin: 0 auto;
-  @media screen and (max-width: $main) {
+  @media screen and (max-width: $bp) {
     width: 100% ;
   }
 }
@@ -167,9 +185,9 @@ a {
   height:  500px;
   padding: 0;
   padding-top: $gap10;
-      @media screen and (max-width: $main) {
-  padding-top: $gap4;
-   height:  350px;
+  @media screen and (max-width: $bp) {
+    padding-top: $gap6;
+    height:  350px;
   }
   background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
   background-repeat: repeat-x, no-repeat;
@@ -179,16 +197,16 @@ a {
 .newsletter {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-      @media screen and (max-width: $main) {
-      display: block;
+  @media screen and (max-width: $bp) {
+    display: block;
 
   }
 }
 .profile {
   display: grid;
   grid-template-columns: 1fr 2fr;
-      @media screen and (max-width: $main) {
-      display: block;
+  @media screen and (max-width: $bp) {
+    display: block;
 
   }
 }
@@ -357,8 +375,8 @@ table {
   .gap {
     background-color: $c-primary;
   }
-      @media screen and (max-width: $main) {
-      display: block;
+  @media screen and (max-width: $bp) {
+    display: block;
     .plan:not(:first-of-type) {
       border-top: solid 1px $c-primary;
       margin-top: $gap4;
@@ -371,10 +389,10 @@ table {
   }
   .action {
     a.btn {
-   margin-top: $gap2;
- }
- p {
-  font-size: $fs3;
+     margin-top: $gap2;
+   }
+   p {
+    font-size: $fs3;
   }
 }
 }
