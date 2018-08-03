@@ -10,7 +10,9 @@ body {
   color: $c-primary;
 }
 
-.cover, .container {
+
+
+.cover, .main {
   @include fadeIn($duration: 500ms);
   @include transition;
 }
@@ -58,10 +60,12 @@ $curl-delay: 500ms;
 .quote, .logo {
  @extend %curl;
  margin-left: -$gap6;
+     @media screen and (max-width: $main) {
+ margin-left: $gap4;
+  }
 }
 .logo {
  @include curl(270px, 145px);
-
  @include fadeIn($delay: $curl-delay);
  h1 {
   font-size: $fs7;
@@ -148,20 +152,25 @@ a {
   }
 }
 
-.container {
-  max-width: $container;
+.main {
+  max-width: $main;
   background-color: $c-secondary;
   padding: 0 $gap4;
-  @media screen and (max-width: $container) {
+  margin: 0 auto;
+  @media screen and (max-width: $main) {
     width: 100% ;
   }
 }
 .cover {
   background-color: $c-cover;
-  @extend .container;
+  @extend .main;
   height:  500px;
   padding: 0;
   padding-top: $gap10;
+      @media screen and (max-width: $main) {
+  padding-top: $gap4;
+   height:  350px;
+  }
   background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
   background-repeat: repeat-x, no-repeat;
   background-position: left top, right bottom;
@@ -170,10 +179,18 @@ a {
 .newsletter {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+      @media screen and (max-width: $main) {
+      display: block;
+
+  }
 }
 .profile {
   display: grid;
   grid-template-columns: 1fr 2fr;
+      @media screen and (max-width: $main) {
+      display: block;
+
+  }
 }
 .newsletter, .profile {
   border-top: solid 1px $c-primary;
@@ -229,7 +246,7 @@ footer.footer {
 
 
 header.header, footer.footer {
-  @extend .container;
+  @extend .main;
   background-color: $c-primary;
   color: $c-white;
   a {
@@ -340,13 +357,29 @@ table {
   .gap {
     background-color: $c-primary;
   }
-  .action {a.btn {
+      @media screen and (max-width: $main) {
+      display: block;
+    .plan:not(:first-of-type) {
+      border-top: solid 1px $c-primary;
+      margin-top: $gap4;
+      padding-top: $gap4;
+    }
+    .gap {
+      display: none;
+    }
+
+  }
+  .action {
+    a.btn {
    margin-top: $gap2;
  }
  p {
   font-size: $fs3;
-  }}
+  }
 }
+}
+
+
 
 .panel-group {
   margin-bottom: $gap3;
