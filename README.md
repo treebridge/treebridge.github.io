@@ -3,6 +3,8 @@
 ## TODO
 
 - branding, 2nd iteration
+- ~~bio photo on frame~~
+- press kit?
 - treebridge email, test
   - newsletter, move email
   - redirect email

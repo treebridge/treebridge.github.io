@@ -57,12 +57,32 @@ $curl-delay: 500ms;
     }
   }
 }
-.quote, .logo {
+.quote, .logo, .avatar {
  @extend %curl;
  margin-left: -$gap6;
  @media screen and (max-width: $bp) {
    margin-left: $gap4;
  }
+}
+.avatar {
+  @include curl(220px, 300px)
+  margin-left: -$gap10;
+  width: 220px;
+   @media screen and (max-width: $bp) {
+   margin-left: 0;
+ }
+  .photo {
+    background-image: url(../images/avatar.png);
+    background-size: 240px 300px;
+    background-position: center $gap;
+    background-repeat: no-repeat;
+    height: 276px;
+    width: 196px;
+    position: absolute;
+    margin-top: -$gap4;
+    margin-left: -$gap4;
+
+  }
 }
 .logo {
   @include curl(270px, 145px);
@@ -77,13 +97,13 @@ $curl-delay: 500ms;
     font-size: $fs5;
   }
   @media screen and (max-width: $bp) {
-      @include curl(218px, 130px);
-  h1 {
-    font-size: $fs5;
-  }
-  h2 {
-    font-size: $fs4;
-  }
+    @include curl(218px, 130px);
+    h1 {
+      font-size: $fs5;
+    }
+    h2 {
+      font-size: $fs4;
+    }
   }
 }
 
@@ -196,7 +216,7 @@ a {
 }
 .newsletter {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   @media screen and (max-width: $bp) {
     display: block;
 
@@ -204,7 +224,7 @@ a {
 }
 .profile {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 180px 1fr;
   @media screen and (max-width: $bp) {
     display: block;
 
@@ -217,14 +237,7 @@ a {
   & > * {
     padding: $gap4 0;
   }
-  .avatar {
-    background-image: url(../images/avatar.png);
-    background-size: auto 330px;
-    opacity: .7;
-    background-position: center $gap3;
-    background-repeat: no-repeat;
-    height: 330px;
-  }
+
 }
 
 .newsletter {
