@@ -2,14 +2,14 @@
 
 ## TODO
 
-- branding, 2nd iteration
+- branding, icon
 - ~~bio photo on frame~~
 - press kit?
 - treebridge email, test
   - newsletter, move email
   - redirect email
 - ~~google form~~
-- redesign form, remove google references
+- ~~redesign form~~
 - ~~google analytics~~
 - ~~newsletter, signup~~
 - ~~newsletter form design~~

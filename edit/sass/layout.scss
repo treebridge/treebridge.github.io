@@ -17,45 +17,15 @@ body {
   @include transition;
 }
 
-$curl-padding: $gap4;
-$curl-border: $gap2;
-$curl-total: ($curl-padding + $curl-border);
-$curl-delay: 500ms;
 
-@mixin curl($w: 300px, $h: 150px) {
-  width: $w;
-  height: $h;
-  .line.ver {
-    width: $w - ($curl-total * 2);
-    height: $h;
-  }
-  .line.hor {
-    width: $w;
-    height: $h - ($curl-total * 2);
-  }
-}
+
 %curl {
   background-color: $c-secondary;
-  border: solid $curl-border $c-primary;
-  padding: $curl-padding;
+  border-top: solid $gap $c-primary;
+  border-bottom: solid $gap $c-primary;
+  padding: $gap4;
+  display: inline-block;
   color: $c-primary;
-  .line {
-    display: block;
-    border: solid 1px $c-secondary;
-    position: absolute;
-
-    &.ver {
-      border-top: none;
-      border-bottom: none;
-      margin-top: -$curl-total;
-
-    }
-    &.hor {
-      margin-left: -$curl-total;
-      border-left: none;
-      border-right: none;
-    }
-  }
 }
 .quote, .logo, .avatar {
  @extend %curl;
@@ -65,28 +35,32 @@ $curl-delay: 500ms;
  }
 }
 .avatar {
-  @include curl(220px, 300px)
   margin-left: -$gap10;
-  width: 220px;
+  width: 200px;
+      height: 276px;
    @media screen and (max-width: $bp) {
    margin-left: 0;
  }
-  .photo {
     background-image: url(../images/avatar.png);
-    background-size: 240px 300px;
-    background-position: center $gap;
+    background-size: contain;
+    background-position: center top;
     background-repeat: no-repeat;
-    height: 276px;
-    width: 196px;
-    position: absolute;
-    margin-top: -$gap4;
-    margin-left: -$gap4;
 
-  }
+    position: absolute;
+
 }
+
+$logo-w: 200px;
+$logo-h: 140px;
 .logo {
-  @include curl(270px, 145px);
-  @include fadeIn($delay: $curl-delay);
+  @include fadeIn($delay: $animation-delay);
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-position: $gap4 $gap3;
+  background-size: $logo-w $logo-h;
+  height: $logo-h + $gap8;
+  width: $logo-w + $gap8;
+
   h1 {
     font-size: $fs7;
     margin-bottom: $gap2;
@@ -97,7 +71,6 @@ $curl-delay: 500ms;
     font-size: $fs5;
   }
   @media screen and (max-width: $bp) {
-    @include curl(218px, 130px);
     h1 {
       font-size: $fs5;
     }
@@ -108,9 +81,8 @@ $curl-delay: 500ms;
 }
 
 .quote {
-  @include curl(350px, 170px);
-  margin-top: -$curl-border;
-  @include fadeIn($delay: ($curl-delay * 2));
+  @include fadeIn($delay: ($animation-delay * 2));
+  margin-top: -$gap2;
   p {
     &:not(.sig) {
       font-size: $fs7;
@@ -119,10 +91,9 @@ $curl-delay: 500ms;
     }
   }
   @media screen and (max-width: $bp) {
-    @include curl(250px, 150px);
     p {
       &:not(.sig) {
-        font-size: $fs5;
+        font-size: $fs6;
         padding-top: 0;
         line-height: 120%;
       }
@@ -206,8 +177,8 @@ a {
   padding: 0;
   padding-top: $gap10;
   @media screen and (max-width: $bp) {
-    padding-top: $gap6;
-    height:  350px;
+    padding-top: $gap4;
+    height:  380px;
   }
   background-image: url(../images/cover-top.png), url(../images/cover-bottom.png);
   background-repeat: repeat-x, no-repeat;
