@@ -36,18 +36,12 @@ body {
 }
 .avatar {
   margin-left: -$gap10;
-  width: 200px;
-      height: 276px;
+
+padding: 0;
+height: 280px;
    @media screen and (max-width: $bp) {
    margin-left: 0;
  }
-    background-image: url(../images/avatar.png);
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-
-    position: absolute;
-
 }
 
 $logo-w: 200px;
