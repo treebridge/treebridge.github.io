@@ -159,6 +159,7 @@ a {
   max-width: $bp;
   background-color: $c-secondary;
   padding: 0 $gap4;
+  border-bottom: solid $gap $c-primary;
   margin: 0 auto;
   @media screen and (max-width: $bp) {
     width: 100% ;
@@ -167,6 +168,8 @@ a {
 .cover {
   background-color: $c-cover;
   @extend .main;
+    border-top: solid $gap $c-primary;
+  border-bottom: none;
   height:  500px;
   padding: 0;
   padding-top: $gap10;
@@ -243,8 +246,11 @@ footer.footer {
 
 header.header, footer.footer {
   @extend .main;
+  display: none;
   background-color: $c-primary;
   color: $c-white;
+  height: $gap;
+  padding: 0;
   a {
     color: $c-white;
     &:hover {
@@ -291,9 +297,7 @@ p.quote {
 }
 
 
-.main {
-  padding-bottom: $gap;
-}
+
 
 .list {
   a {
