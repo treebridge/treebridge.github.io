@@ -8,6 +8,7 @@
 - treebridge email, test
   - newsletter, move email
   - redirect email
+- website favicon
 - biz cards
 
 --------
