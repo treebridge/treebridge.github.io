@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "LinLibertineDisplay";
+    src: url("LinLibertine_DR.eot");
+    src: url("LinLibertine_DR.eot?#iefix") format("embedded-opentype"),
+         url("LinLibertine_DR.woff2") format("woff2"),
+         url("LinLibertine_DR.woff") format("woff"),
+         url("LinLibertine_DR.ttf") format("ttf"),
+         url("LinLibertine_DR.svg#LinLibertineDisplay") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

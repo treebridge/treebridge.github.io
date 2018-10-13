@@ -1,6 +1,6 @@
 @include font-face(fontawesome-webfont);
 @include font-face(Foglihten-068);
-@include font-face(AC_BigSerif_One);
+@include font-face(Mermaid1001);
 
 
 body {
@@ -45,7 +45,7 @@ height: 280px;
 }
 
 $logo-w: 200px;
-$logo-h: 140px;
+$logo-h: 80px;
 .logo {
   @include fadeIn($delay: $animation-delay);
   background-image: url(../images/logo.svg);
@@ -56,20 +56,22 @@ $logo-h: 140px;
   width: $logo-w + $gap8;
 
   h1 {
-    font-size: $fs7;
+    font-size: $fs8;
+    font-weight: normal;
     margin-bottom: $gap2;
     padding-bottom: $gap;
     border-bottom: solid 1px $c-primary;
   }
   h2 {
-    font-size: $fs5;
+    font-size: $fs6;
+    font-weight: normal;
   }
   @media screen and (max-width: $bp) {
     h1 {
-      font-size: $fs5;
+      font-size: $fs6;
     }
     h2 {
-      font-size: $fs4;
+      font-size: $fs5;
     }
   }
 }
@@ -137,14 +139,14 @@ p {
 }
 
 h1 {
-  font-size: $fs10;
+  font-size: $fs11;
 }
 
 h2 {
-  font-size: $fs6;
+  font-size: $fs7;
 }
 h3 {
-  font-size: $fs4;
+  font-size: $fs5;
 }
 
 a {
