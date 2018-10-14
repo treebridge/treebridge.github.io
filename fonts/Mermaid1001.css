@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Mermaid-Bold";
+    src: url("Mermaid1001.eot");
+    src: url("Mermaid1001.eot?#iefix") format("embedded-opentype"),
+         url("Mermaid1001.woff2") format("woff2"),
+         url("Mermaid1001.woff") format("woff"),
+         url("Mermaid1001.ttf") format("ttf"),
+         url("Mermaid1001.svg#Mermaid-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}

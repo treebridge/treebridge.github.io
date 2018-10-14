@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "ACBigSerif-One";
+    src: url("AC_BigSerif_One.eot");
+    src: url("AC_BigSerif_One.eot?#iefix") format("embedded-opentype"),
+         url("AC_BigSerif_One.woff2") format("woff2"),
+         url("AC_BigSerif_One.woff") format("woff"),
+         url("AC_BigSerif_One.ttf") format("ttf"),
+         url("AC_BigSerif_One.svg#ACBigSerif-One") format("svg");
+    font-style: normal;
+    font-weight: regular;
+}

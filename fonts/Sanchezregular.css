@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Sanchez-Regular";
+    src: url("Sanchezregular.eot");
+    src: url("Sanchezregular.eot?#iefix") format("embedded-opentype"),
+         url("Sanchezregular.woff2") format("woff2"),
+         url("Sanchezregular.woff") format("woff"),
+         url("Sanchezregular.ttf") format("ttf"),
+         url("Sanchezregular.svg#Sanchez-Regular") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
